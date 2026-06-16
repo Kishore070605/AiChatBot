@@ -12,7 +12,7 @@ const Store=require('./models/store')
 
 
 app.use(cors(
-    {origin: 'https://aichatbot-wn12.onrender.com'},
+{origin: 'https://aichatbot765.vercel.app'},
 ));
 
 const groq=new Groq({
