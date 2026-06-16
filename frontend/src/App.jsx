@@ -16,11 +16,11 @@ function App() {
 
     event.preventDefault()
     setChat((prev) =>{return [...prev, { user: input }]})
-    const response = await axios.post("http://localhost:3000/aichatbot", { message: input })
+    const response = await axios.post("https://aichatbot765.vercel.app/aichatbot", { message: input })
     console.log(response.data.response)
     setChat((prev) =>{return [...prev, { ai: response.data.response }]})
     setInput("")
-    const storeResponse = await axios.post("http://localhost:3000/store", { question: input, answer: response.data.response })
+    const storeResponse = await axios.post("https://aichatbot765.vercel.app/store", { question: input, answer: response.data.response })
     console.log(storeResponse.data)
     if (storeResponse.data.message === 'Data saved successfully') {
       console.log('Data stored in the database successfully');
