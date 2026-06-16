@@ -12,7 +12,7 @@ const Store=require('./models/store')
 
 
 app.use(cors(
-    {origin: 'http://localhost:5173'},
+    {origin: 'https://aichatbot-wn12.onrender.com'},
 ));
 
 const groq=new Groq({
